@@ -1,5 +1,5 @@
 FROM registry.gitlab.com/enki-portal/thermoengine:master
-COPY ./.jupyter/jupyter_notebook_config.py ${HOME}
+COPY /home/jovyan ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 RUN pip install --no-cache-dir appmode
