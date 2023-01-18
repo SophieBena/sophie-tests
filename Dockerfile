@@ -1,5 +1,5 @@
 FROM registry.gitlab.com/enki-portal/thermoengine:master
-COPY $(realpath .) ${HOME}
+COPY $(pwd) ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 RUN pip install --no-cache-dir appmode
