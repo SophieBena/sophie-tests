@@ -1,5 +1,5 @@
 FROM registry.gitlab.com/enki-portal/thermoengine:master
-COPY jupyter_server_config.py /etc/jupyter/ # buildkit ${HOME}
+COPY '.' ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 RUN pip install --no-cache-dir appmode
